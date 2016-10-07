@@ -1,0 +1,1 @@
+//[] execVM "LifeServer\SQL\functions.sqf";
