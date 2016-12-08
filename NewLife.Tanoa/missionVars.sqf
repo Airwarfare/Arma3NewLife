@@ -35,3 +35,21 @@ life_licenses = [
 	["Truck License", 50, false, ["DMV"]],
 	["Gang License", 50000, false, ["DEV"]]
 ];
+
+
+//[]
+//Crimes
+life_crimes = [
+	500,
+	1000,
+	2000,
+	5000,
+	10000,
+	20000,
+	30000,
+	40000,
+	50000,
+	75000,
+	100000,
+	120000
+];
