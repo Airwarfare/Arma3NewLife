@@ -3,10 +3,9 @@ Author:Airwarfare
 Purpose: Var to access for the mission file and making them easier to edit
 Note: This file is going to be massive and I will try to organize it the best I can but good luck
 */
-
+//Spawn
+positions = [];
 //Gangs
-gang_cost = 0;
-
 
 //Weight
 weight_max = 0;

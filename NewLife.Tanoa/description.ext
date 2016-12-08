@@ -1,0 +1,45 @@
+#include "Dialogs\common.hpp"
+#include "Dialogs\Dialogs.hpp"
+
+class RscTitles {
+	#include "Dialogs\HUD.hpp"
+};
+
+class CfgNotifications
+{
+	class Error
+	{
+		title = "ERROR";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+		iconText = "";
+		description = "%1";
+		color[] = {0.878,0.063,0.075,1};
+		duration = 3;
+		priority = 2;
+		difficulty[] = {};
+	};
+
+	class Default
+	{
+		title = "Notifcation";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\power_CA.paa";
+		iconText = "";
+		description = "%1";
+		color[] = {1,1,1,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};
+	};
+
+	class Complete
+	{
+		title = "%1";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		iconText = "";
+		description = "%2";
+		color[] = {1,1,1,1};
+		duration = 5;
+		priority = 0;
+		difficulty[] = {};	
+	};
+};

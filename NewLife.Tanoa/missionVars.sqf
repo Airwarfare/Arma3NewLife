@@ -11,6 +11,7 @@ serverInfo = nil;
 
 //Paycheck
 life_paycheck = nil;
+life_mainbank = nil;
 //Gangs
 gang_current_name = nil;
 gang_isLeader = nil;
@@ -21,3 +22,16 @@ life_civ_level = nil;
 life_cop_level = nil;
 life_terror_level = nil;
 life_vip_level = nil;
+
+//Side
+life_sides = ["Cop", "Civ", "Terror"];
+life_side = nil;
+
+
+// ["LicenseName", Price, Illegal, StoreArray]
+//Licenses
+life_licenses = [
+	["Drivers License", 50, false, ["DMV"]],
+	["Truck License", 50, false, ["DMV"]],
+	["Gang License", 50000, false, ["DEV"]]
+];

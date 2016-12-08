@@ -24,6 +24,11 @@ compileFinal "
 	};
 ";
 
+fnc_pos_query = 
+compileFinal "
+	positions = _this;
+";
+
 fnc_player_update_life_levels = 
 compileFinal "
 	life_level = playerInfo select 7;
@@ -54,10 +59,53 @@ fnc_update_bank_value =
 compileFinal "
 	_value = _this select 0;
 	_u = (playerInfo select 4) + _value;
+	if(_u < 0) then {
+		_u = 0;
+	};
 	[""Bank"", _u, getPlayerUID player, ""playerinfo""] remoteExec [""sql_generic_update"", 2];
 ";
 
 fnc_server_query =
 compileFinal "
 	serverInfo = _this;
+	life_mainbank = serverInfo select 0;
+";
+
+fnc_key_press = 
+compileFinal"
+	pressed = compile preprocessFile ""Core\Functions\onKeyPress.sqf"";
+	_this call pressed;
+";
+
+/*
+Uses notifications from Arma to display to player
+Method Signature(Message, Format(int), Title)
+Format 0 = Error Format
+Format 1 = Default Format
+Format 2 = Complete Format
+*/
+fnc_receive_notification = 
+compileFinal"
+	_message = _this select 0;
+	_format = _this select 1;
+	_title = _this select 2;
+	switch (_format) do {
+		case 0:
+		{
+			[""Error"", [_message]] call bis_fnc_showNotification;
+		};
+		case 1:
+		{
+			[""Default"", [_message]] call bis_fnc_showNotification;
+		};
+		case 2:
+		{
+			[""Complete"", [_title, _message]] call bis_fnc_showNotification;
+		};
+	};
+";
+
+fnc_isGangLeader = 
+compileFinal"
+	gang_isLeader = _this select 0;
 ";
