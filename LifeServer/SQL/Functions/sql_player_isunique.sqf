@@ -6,7 +6,7 @@ Method Signature(UID, ClientID)
 _b = false;
 _uid = _this select 0;
 _clientID = _this select 1;
-_query = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['serverlife', 'SELECT * FROM serverlife.playerinfo WHERE UID = '%1'']", _uid];
+_query = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['serverlife', 'SELECT UID FROM serverlife.playerinfo WHERE UID = '%1'']", _uid];
 diag_log format ["Query: %1 Count? %2", _query, Count _query];
 if(Count _query != 4) then
 {

@@ -23,4 +23,5 @@ if(_isAdd) then {
 	//Arma 3 Is Usefull!!!!!
 	_grabPlayerInfo = _grabPlayerInfo - [_licenseObject];
 };
+diag_log format ["_grabPlayerInfo %1 typeName %2", _grabPlayerInfo, typeName _grabPlayerInfo];
 _update = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['serverlife', 'UPDATE playerinfo SET Licenses = '%1' WHERE uid = '%2'']", _grabPlayerInfo, _uid];

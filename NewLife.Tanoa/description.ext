@@ -1,6 +1,8 @@
 #include "Dialogs\common.hpp"
 #include "Dialogs\Dialogs.hpp"
 
+disabledAI = 1;
+enableDebugConsole = 1;
 class RscTitles {
 	#include "Dialogs\HUD.hpp"
 };
