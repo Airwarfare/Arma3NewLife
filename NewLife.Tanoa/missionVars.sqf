@@ -33,6 +33,7 @@ life_side = nil;
 life_licenses = [
 	["Drivers License", 50, false, ["DMV"]],
 	["Truck License", 50, false, ["DMV"]],
+	["TestingAdding", 200, false, ["DMV"]],
 	["Gang License", 50000, false, ["DEV"]]
 ];
 

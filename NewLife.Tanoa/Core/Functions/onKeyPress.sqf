@@ -31,8 +31,9 @@ switch(_this select 1) do
 	//F2 Debug
 	case 60:
 	{
+		hint format["array %1", playerInfo select 13];
 		_uid = getPlayerUID player;
-		[_uid, (life_licenses select 0), true] remoteExec ["sql_license_update", 2];
+		[_uid, (life_licenses select 1), true, owner player] remoteExec ["sql_license_update", 2];
 	};
 };
 _handled;

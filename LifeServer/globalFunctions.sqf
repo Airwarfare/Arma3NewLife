@@ -13,5 +13,5 @@ sql_gang_add_player = compile preprocessFile "LifeServer\SQL\Functions\sql_gang_
 sql_license_update = compile preprocessFile "LifeServer\SQL\Functions\sql_license_update.sqf";
 
 //Server Functions
-
+debug = compile preprocessFile "LifeServer\debug.sqf";
 s_find_player_object = compile preprocessFile "LifeServer\GameLogic\Functions\s_find_player_object.sqf";

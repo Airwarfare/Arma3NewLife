@@ -43,8 +43,10 @@ waitUntil {!(isNull (findDisplay 46))};
 diag_log format ["This is the client!"];
 
 [_uid, owner player] remoteExec ["sql_player_isunique", 2];
-[_uid, owner player] remoteExec ["sql_player_query", 2];
+_server = [_uid, owner player] remoteExec ["sql_player_query", 2];
+sleep 2;
 [_uid] remoteExec ["sql_pos_query", 2];
 [owner player] remoteExec ["sql_server_query", 2];
 ["LifeLevel", 20, _uid, "playerinfo"] remoteExec ["sql_generic_update", 2];
+[] call fnc_getShops;
 //["Licenses", ["Testing how arrays work", 20, "20"], _uid] remoteExec ["sql_generic_update", 2];

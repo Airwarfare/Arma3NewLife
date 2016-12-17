@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=3;
+		nextID=7;
 	};
 	class Camera
 	{
-		pos[]={5215.7534,19.001141,8613.7764};
-		dir[]={-0.45834437,-0.63604325,0.62080705};
-		up[]={-0.37778574,0.77165276,0.51169509};
-		aside[]={0.80450964,8.9290552e-008,0.59397149};
+		pos[]={5687.0005,7.9764309,10310.021};
+		dir[]={0.2820228,-0.46855998,0.83725846};
+		up[]={0.14958073,0.88341355,0.44406864};
+		aside[]={0.94772351,-3.4831464e-007,-0.31923053};
 	};
 };
 binarizationWanted=0;
@@ -66,7 +66,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1;
+		items=3;
 		class Item0
 		{
 			dataType="Group";
@@ -79,7 +79,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5205.5239,5.9180489,8624.0313};
+						position[]={5686.2393,3.6110582,10312.599};
 					};
 					side="West";
 					flags=7;
@@ -90,7 +90,6 @@ class Mission
 					};
 					id=1;
 					type="B_Soldier_A_F";
-					atlOffset=-4.7683716e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -120,7 +119,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5208.2529,5.8109994,8627.293};
+						position[]={5683.2412,3.5162389,10313.387};
 					};
 					side="West";
 					flags=5;
@@ -136,7 +135,173 @@ class Mission
 			{
 			};
 			id=0;
-			atlOffset=-4.7683716e-007;
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5686.7412,3.630091,10318.59};
+						angles[]={0,4.0897431,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="SHOP1 setVariable [""_shop"", [""DMV"", ""DEV""], true];";
+						name="SHOP1";
+						disableSimulation=1;
+					};
+					id=4;
+					type="C_man_p_beggar_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=3;
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5690.8931,3.6997592,10317.323};
+						angles[]={0,3.6011901,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="SHOP2 setVariable [""_shop"", [""HELI""], true]";
+						name="SHOP2";
+						disableSimulation=1;
+					};
+					id=6;
+					type="C_Nikos_aged";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=5;
 		};
 	};
 };
