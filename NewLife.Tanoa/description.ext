@@ -45,3 +45,26 @@ class CfgNotifications
 		difficulty[] = {};	
 	};
 };
+
+class CfgHints
+{
+	class LevelUp
+	{
+		displayName = "Level Up";
+		class OnLevel
+		{
+			displayName = "Level Up";
+			displayNameShort = "Level Up";
+			description = "%11";
+			arguments[] = {
+				"[] call fnc_levelup_notfication"
+			};
+			noImage = true;
+		};
+	};
+};
+
+class Params
+{
+	#include "\a3\Functions_F\Params\paramRevive.hpp"
+};

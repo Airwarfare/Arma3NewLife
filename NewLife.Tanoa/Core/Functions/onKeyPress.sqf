@@ -18,10 +18,10 @@ switch(_this select 1) do
 	//Y
 	case 21:
 	{
-		_uid = getPlayerUID player;
-		["KKK", _uid] remoteExec ["sql_create_gang", 2];
-		diag_log "Pressed Y WTF?";
-		_handled = true;
+		if(isNull(findDisplay 40000)) then {
+			_ok = createDialog "player_menu";
+			[] call fnc_player_menu;
+		};
 	};
 	//H
 	case 35:
@@ -34,6 +34,35 @@ switch(_this select 1) do
 		hint format["array %1", playerInfo select 13];
 		_uid = getPlayerUID player;
 		[_uid, (life_licenses select 1), true, owner player] remoteExec ["sql_license_update", 2];
+	};
+	//SHIFTL
+	case 42:
+	{
+		_vehicle = vehicle player;
+		if(_vehicle != player) then {
+			_vel = velocity _vehicle;
+			_dir = direction _vehicle;
+			_speed = 0.3;
+			_vehicle setVelocity [
+				(_vel select 0) + (sin _dir * _speed),
+				(_vel select 1) + (cos _dir * _speed),
+				(_vel select 2)];	
+		};
+	};
+	//CTRL L
+	case 29:
+	{
+		_vehicle = vehicle player;
+		if(_vehicle != player) then {
+			_vel = velocity _vehicle;
+			_dir = direction _vehicle;
+			if(_vel select 0 < 0) exitWith {};
+			_speed = 1;
+			_vehicle setVelocity [
+				(_vel select 0) - (sin _dir * _speed),
+				(_vel select 1) - (cos _dir * _speed),
+				(_vel select 2)];	
+		};
 	};
 };
 _handled;

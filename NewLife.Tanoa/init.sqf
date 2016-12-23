@@ -15,6 +15,7 @@ diag_log "HERE";
 _uid = getPlayerUID player;
 _name = name vehicle player;
 _mission = [] execVM "missionVars.sqf";
+_config = [] execVM "Config\configInit.sqf";
 _side = side player;
 
 //Testing
@@ -25,16 +26,24 @@ switch(_side) do
 	case west:
 	{
 		life_side = life_sides select 0;
+		player setUnitTrait ["Medic", false];
 	};
 	case civilian:
 	{
 		life_side = life_sides select 1;
+		player setUnitTrait ["Medic", false];
+	};
+	case resistance: 
+	{	
+		life_side = life_sides select 3;
+		player setUnitTrait ["Medic", true];
 	};
 };
-[] call compile preprocessFileLineNumbers "Core\Functions\func.sqf";
+//[] call compile preprocessFileLineNumbers "Core\Functions\func.sqf";
+_script_handle = [] execVM "Core\Functions\globalFunctions.sqf";
+waitUntil { scriptDone _script_handle };
+[] call compile preprocessFileLineNumbers "Core\Functions\uifunc.sqf";
 [] execVM "Core\init.sqf";
-//Idk if I really need this file but yolo
-diag_log "Core.init.sqf.init";
 waitUntil {!(isNull (findDisplay 46))};
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call fnc_key_press"];
@@ -43,10 +52,21 @@ waitUntil {!(isNull (findDisplay 46))};
 diag_log format ["This is the client!"];
 
 [_uid, owner player] remoteExec ["sql_player_isunique", 2];
+waitUntil { isUniqueDone };
 _server = [_uid, owner player] remoteExec ["sql_player_query", 2];
-sleep 2;
-[_uid] remoteExec ["sql_pos_query", 2];
+//sleep 2;
+[owner player] remoteExec ["sql_pos_query", 2];
 [owner player] remoteExec ["sql_server_query", 2];
-["LifeLevel", 20, _uid, "playerinfo"] remoteExec ["sql_generic_update", 2];
+//["LifeLevel", 20, _uid, "playerinfo", owner player] remoteExec ["sql_generic_update", 2];
 [] call fnc_getShops;
+0 cutText["Setting Up Vars.....", "BLACK FADED"];
+0 cutFadeOut 9999999;
+sleep 1;
+waitUntil{ posQuery };
+sleep 0.1;
+0 cutText ["","BLACK IN"];
+//38500
+_ok = createDialog "spawn_menu";
+[] call fnc_addSpawnPoints;
+
 //["Licenses", ["Testing how arrays work", 20, "20"], _uid] remoteExec ["sql_generic_update", 2];

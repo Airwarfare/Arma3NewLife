@@ -36,16 +36,19 @@ class spawn_menu {
             h = 0.0800001 * safezoneH;
             sizeEx = 2 * GUI_GRID_H;
             text = "Confirm"; //--- ToDo: Localize;
-            action = "";
+            action = "[] call fnc_spawnPoint";
         };
-        class ListSpawn: RscListbox
+        class ListSpawn: RscListBox
         {
             idc = 1500;
+            text = "";
+            sizeEx = 0.041;
             x = 0.00572187 * safezoneW + safezoneX;
             y = 0.00918 * safezoneH + safezoneY;
             w = 0.286563 * safezoneW;
             h = 0.88926 * safezoneH;
-            sizeEx = 4 * GUI_GRID_H;
+            //sizeEx = 4 * GUI_GRID_H;
+            onLBSelChanged= "_this call fnc_updatePos";
         };
     };
 };

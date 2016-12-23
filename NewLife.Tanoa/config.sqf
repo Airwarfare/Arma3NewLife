@@ -4,7 +4,8 @@ Purpose: Var to access for the mission file and making them easier to edit
 Note: This file is going to be massive and I will try to organize it the best I can but good luck
 */
 //Spawn
-positions = [];
+positions = nil;
+currentPos = nil;
 //Gangs
 
 //Weight

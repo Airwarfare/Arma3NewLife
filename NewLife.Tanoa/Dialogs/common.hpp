@@ -131,7 +131,7 @@ class RscListNBox
     style = 16;
     type = 102;
     shadow = 0;
-    font = "PuristaMedium";
+    font = "TahomaB";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     color[] = {0.95,0.95,0.95,1};
     colorText[] = {1,1,1,1.0};

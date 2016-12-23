@@ -1,0 +1,1 @@
+[] execVM "Config\shopConfig.sqf";
