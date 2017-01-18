@@ -11,6 +11,8 @@ sql_create_gang = compile preprocessFile "LifeServer\SQL\Functions\sql_create_ga
 sql_find_gang_leader = compile preprocessFile "LifeServer\SQL\Functions\sql_find_gang_leader.sqf";
 sql_gang_add_player = compile preprocessFile "LifeServer\SQL\Functions\sql_gang_add_player.sqf";
 sql_license_update = compile preprocessFile "LifeServer\SQL\Functions\sql_license_update.sqf";
+sql_pos_query = compile preprocessFile "LifeServer\SQL\Functions\sql_pos_query.sqf";
+sql_addVitem = compile preprocessFile "LifeServer\SQL\Functions\sql_addVitem.sqf";
 
 //Server Functions
 debug = compile preprocessFile "LifeServer\debug.sqf";

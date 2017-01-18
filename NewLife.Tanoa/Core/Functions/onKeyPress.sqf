@@ -26,7 +26,7 @@ switch(_this select 1) do
 	//H
 	case 35:
 	{
-		_uid = getPlayerUID player;
+		["Gold", 2, getPlayerUID player, owner player] remoteExec ["sql_addVitem", 2];
 	};
 	//F2 Debug
 	case 60:
@@ -46,7 +46,7 @@ switch(_this select 1) do
 			_vehicle setVelocity [
 				(_vel select 0) + (sin _dir * _speed),
 				(_vel select 1) + (cos _dir * _speed),
-				(_vel select 2)];	
+				(_vel select 2)];
 		};
 	};
 	//CTRL L
@@ -61,7 +61,7 @@ switch(_this select 1) do
 			_vehicle setVelocity [
 				(_vel select 0) - (sin _dir * _speed),
 				(_vel select 1) - (cos _dir * _speed),
-				(_vel select 2)];	
+				(_vel select 2)];
 		};
 	};
 };
