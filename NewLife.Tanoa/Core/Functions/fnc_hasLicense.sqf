@@ -4,7 +4,8 @@ Purpose: Checks if player has a licenses or not
 Method Signature("NameOfLicense")
 */
 _bool = false;
-_array = call compile (playerInfo select 13);
+diag_log format["PlayerInfo:13 %1 | %2", playerInfo select 13, typeName (playerInfo select 13)];
+_array = playerInfo select 13;
 _name = _this select 0;
 {
 	if((_x select 0) == _name) then {

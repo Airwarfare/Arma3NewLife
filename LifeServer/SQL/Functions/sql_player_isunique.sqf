@@ -6,10 +6,15 @@ Method Signature(UID, ClientID)
 _b = false;
 _uid = _this select 0;
 _clientID = _this select 1;
-_query = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['serverlife', 'SELECT * FROM serverlife.playerinfo']"];
-diag_log format ["Query: %1 Count? %2", _query, Count _query];
+diag_log "IsUnique";
+_query = "";
+_query = "SELECT * FROM serverlife.playerinfo" call sql_async_call;
+waitUntil{!(_query == "")};
+_query call debug;
 _query = call compile _query;
-_query = _query select 0;
+_query call debug;
+_query = _query select 1;
+_query call debug;
 {
 	if(_x select 0 == _uid) then {
 		_b = true;

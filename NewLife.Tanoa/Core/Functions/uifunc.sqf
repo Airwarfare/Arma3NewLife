@@ -3,13 +3,16 @@ Author: Airwarfare
 */
 disableSerialization;
 
-fnc_addSpawnPoints = 
+fnc_addSpawnPoints =
 compileFinal"
+	diag_log ""SpawnPoints"";
+	diag_log format[""positions %1 | %2"", positions, typeName positions];
 	waitUntil{!isNull (findDisplay 38500)};
 	_control = (findDisplay 38500) displayCtrl 1500;
 	{
+		diag_log format[""Foreach %1 | %2"", _x select 0, typeName (_x select 0)];
 		if(_x select 0 == life_side) then {
-			if(parseNumber(_x select 2) <= parseNumber(life_level)) then {
+			if(_x select 2 <= life_level) then {
 				_text = format[""%1"", _x select 3];
 				_index = _control lbAdd _text;
 				_pos = _x select 1;
@@ -17,10 +20,10 @@ compileFinal"
 				_tooltip = lbSetValue [1500, _index, format[""%1"", _x select 3]];
 			};
 		};
-	} forEach (positions select 0);
+	} forEach positions;
 ";
 
-fnc_updatePos = 
+fnc_updatePos =
 compileFinal"
 	_index = _this select 1;
 	_pos = lbData [1500, _index];
@@ -32,7 +35,7 @@ compileFinal"
 //_pos = call compile _pos;
 
 
-fnc_spawnPoint = 
+fnc_spawnPoint =
 compileFinal"
 	_index = lbCurSel 1500;
 	_pos = lbData [1500, _index];
@@ -41,14 +44,14 @@ compileFinal"
 	closeDialog 38500;
 ";
 
-fnc_player_menu = 
+fnc_player_menu =
 compileFinal"
 	[] call fnc_player_menu_st_info;
 	[] call fnc_player_menu_staff;
 	[] call fnc_player_menu_licenses;
 ";
 
-fnc_player_menu_st_info = 
+fnc_player_menu_st_info =
 compileFinal"
 	_control = (findDisplay 40000) displayCtrl 41100;
 	_i = 0;
@@ -88,9 +91,9 @@ compileFinal"
 	};
 ";
 
-fnc_player_menu_licenses = 
+fnc_player_menu_licenses =
 compileFinal"
-	_e = call compile (playerInfo select 13);
+	_e = playerInfo select 13;
 	_control = (findDisplay 40000) displayCtrl 41500;
 	{
 		_index = _control lbAdd (_x select 0);

@@ -8,13 +8,13 @@ _UID = _this select 1;
 _level = nil;
 _column = nil;
 switch(_levelType) do {
-	case 1: {_level = call compile (playerInfo select 7);
+	case 1: {_level = playerInfo select 7;
 			 _column = "LifeLevel";};
-	case 2: {_level = call compile (playerInfo select 8);
+	case 2: {_level = playerInfo select 8;
 			 _column = "CivLevel";};
-	case 3: {_level = call compile (playerInfo select 9);
+	case 3: {_level = playerInfo select 9;
 			 _column = "CopLevel";};
-	case 4: {_level = call compile (playerInfo select 10);
+	case 4: {_level = playerInfo select 10;
 			 _column = "TerrorLevel";};
 };
 _lastLevel = [_level, _column];

@@ -2,6 +2,7 @@
 Author: Airwarfare
 */
 //Sql Functions
+sql_async_call = compile preprocessFile "LifeServer\SQL\Functions\sql_async_call.sqf";
 sql_player_new = compile preprocessFile "LifeServer\SQL\Functions\sql_player_new.sqf";
 sql_player_isunique = compile preprocessFile "LifeServer\SQL\Functions\sql_player_isunique.sqf";
 sql_player_query = compile preprocessFile "LifeServer\SQL\Functions\sql_player_query.sqf";
