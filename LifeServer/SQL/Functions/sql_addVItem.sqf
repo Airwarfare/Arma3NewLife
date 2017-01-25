@@ -28,6 +28,6 @@ if(!_added) then {
 diag_log format ["Vitem: %1 typeName %2", _query, typeName _query];
 //Thinks comas seperate columns but somehow this works on other arrays but not this one?
 //Fucking Arma2Net
-_update = "extDB3" callExtension format["2:SQL:UPDATE playerinfo SET Vitems = '%1' WHERE UID = '""%2""'", _query, _uid];
+_update = "extDB3" callExtension format["1:SQL:UPDATE playerinfo SET Vitems = '%1' WHERE UID = '""%2""'", _query, _uid];
 diag_log format ["Error: %1", _update];
 //["Vitems", format["%1",_query], _uid, "playerInfo", _clientId] call sql_generic_update;

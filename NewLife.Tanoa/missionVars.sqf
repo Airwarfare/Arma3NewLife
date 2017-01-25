@@ -1,6 +1,6 @@
 /*
 Author: Airwarfare
-Purpose: Misson vars in one place that need to be global for the mission file, 
+Purpose: Misson vars in one place that need to be global for the mission file,
 this just makes it easier for me to look and remember all of them in a some what organized way.
 */
 
@@ -9,6 +9,7 @@ playerInfo = nil;
 serverInfo = nil;
 posQuery = false;
 isUniqueDone = false;
+//Do Cash Or Bank Withdraw Pick
 
 //Paycheck
 life_paycheck = nil;
@@ -69,7 +70,7 @@ Level, XP, Difference
 3: 600, 300
 4: 1000, 400
 5: 1500, 500
-Equation 
+Equation
 levelexp = level*100 + lastlevelexp
 */
 
@@ -95,5 +96,5 @@ life_virtual_items = [
 	["Gold", 10, false, ""],
 	["Pickaxe", 4, false, ""],
 	["Apple", 1, false, ""],
-	["Bacon", 1, false, ""]	
+	["Bacon", 1, false, ""]
 ];
