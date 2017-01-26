@@ -15,9 +15,13 @@ sql_license_update = compile preprocessFile "LifeServer\SQL\Functions\sql_licens
 sql_pos_query = compile preprocessFile "LifeServer\SQL\Functions\sql_pos_query.sqf";
 sql_addVitem = compile preprocessFile "LifeServer\SQL\Functions\sql_addVitem.sqf";
 sql_getVitem = compile preprocessFile "LifeServer\SQL\Functions\sql_getVitem.sqf";
-sql_withdrawBank = compile preprocessFile "LifeServer\SQL\Functions\sql_withdrawBank.sqf";
-sql_cashToBank = compile preprocessFile "LifeServer\SQL\Functions\sql_cashToBank.sqf";
-sql_transferToPlayer = compile preprocessFile "LifeServer\SQL\Functions\sql_transferToPlayer.sqf";
+
+
+
+//Economy functions
+server_fnc_withdrawBank = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_withdrawBank.sqf";
+server_fnc_cashToBank = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_cashToBank.sqf";
+server_fnc_transferToPlayer = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_transferToPlayer.sqf";
 
 //Server Functions
 debug = compile preprocessFile "LifeServer\debug.sqf";
