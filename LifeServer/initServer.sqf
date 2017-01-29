@@ -12,3 +12,5 @@ _query = "extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:ServerLife:SQL:SQL";
 
 ServerIsDone = true;
 publicVariable "ServerIsDone";
+//Start Paychecks
+[] call server_fnc_paychecks;

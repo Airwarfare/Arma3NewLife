@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=318;
+		nextID=320;
 	};
 	class Camera
 	{
-		pos[]={5682.8413,6.7388439,10312.987};
-		dir[]={0.9225449,-0.23236923,0.30848104};
-		up[]={0.22054631,0.97257584,0.073748238};
-		aside[]={0.31715247,-1.5530022e-006,-0.94848764};
+		pos[]={5684.0962,64.260307,10313.88};
+		dir[]={0.43245175,-0.56759417,0.70076436};
+		up[]={0.29813409,0.82322758,0.48311314};
+		aside[]={0.85109288,-1.6880222e-007,-0.52522576};
 	};
 };
 binarizationWanted=0;
@@ -183,7 +183,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=111;
+		items=112;
 		class Item0
 		{
 			dataType="Group";
@@ -6162,6 +6162,60 @@ class Mission
 			{
 			};
 			id=316;
+		};
+		class Item111
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5697.3403,3.7678623,10314.451};
+						angles[]={0,3.6234431,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="SHOP3 setVariable [""_shop"", [""BANK""], true]";
+						name="SHOP4";
+					};
+					id=319;
+					type="C_scientist_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=318;
 		};
 	};
 };

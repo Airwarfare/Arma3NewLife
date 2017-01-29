@@ -99,3 +99,14 @@ compileFinal"
 		_index = _control lbAdd (_x select 0);
 	} forEach _e;
 ";
+
+fnc_atm_menu =
+compileFinal"
+	if(isNull(findDisplay 39000)) then {
+		_ok = createDialog ""ATMBank"";
+		_bankAmount = (findDisplay 39000) displayCtrl 1001;
+		_cashAmount = (findDisplay 39000) displayCtrl 1000;
+		_bankAmount ctrlSetText format[""$%1"", playerInfo select 4];
+		_cashAmount ctrlSetText format[""$%1"", playerInfo select 5];
+	};
+";
