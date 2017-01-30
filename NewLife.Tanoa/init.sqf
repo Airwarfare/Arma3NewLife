@@ -17,7 +17,8 @@ _name = name vehicle player;
 _mission = [] execVM "missionVars.sqf";
 _config = [] execVM "Config\configInit.sqf";
 _side = side player;
-
+TickTime1 = nil;
+TickTime2 = nil;
 //Testing
 waitUntil { scriptDone _mission };
 [] execVM "config.sqf";
@@ -33,8 +34,8 @@ switch(_side) do
 		life_side = life_sides select 1;
 		player setUnitTrait ["Medic", false];
 	};
-	case resistance: 
-	{	
+	case resistance:
+	{
 		life_side = life_sides select 3;
 		player setUnitTrait ["Medic", true];
 	};
@@ -43,7 +44,6 @@ switch(_side) do
 _script_handle = [] execVM "Core\Functions\globalFunctions.sqf";
 waitUntil { scriptDone _script_handle };
 [] call compile preprocessFileLineNumbers "Core\Functions\uifunc.sqf";
-[] execVM "Core\init.sqf";
 waitUntil {!(isNull (findDisplay 46))};
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call fnc_key_press"];
@@ -54,7 +54,6 @@ diag_log format ["This is the client!"];
 [_uid, owner player] remoteExec ["sql_player_isunique", 2];
 waitUntil { isUniqueDone };
 _server = [_uid, owner player] remoteExec ["sql_player_query", 2];
-//sleep 2;
 [owner player] remoteExec ["sql_pos_query", 2];
 [owner player] remoteExec ["sql_server_query", 2];
 //["LifeLevel", 20, _uid, "playerinfo", owner player] remoteExec ["sql_generic_update", 2];
@@ -68,5 +67,6 @@ sleep 0.1;
 //38500
 _ok = createDialog "spawn_menu";
 [] call fnc_addSpawnPoints;
-
+sleep 4;
+[] execVM "Core\init.sqf";
 //["Licenses", ["Testing how arrays work", 20, "20"], _uid] remoteExec ["sql_generic_update", 2];

@@ -23,6 +23,7 @@ server_fnc_withdrawBank = compile preprocessFile "LifeServer\GameLogic\Economy\s
 server_fnc_cashToBank = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_cashToBank.sqf";
 server_fnc_transferToPlayer = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_transferToPlayer.sqf";
 server_fnc_addToBank = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_addToBank.sqf";
+server_fnc_addToCash = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_cashToBank.sqf";
 server_fnc_paychecks = compile preprocessFile "LifeServer\GameLogic\Economy\server_fnc_paychecks.sqf";
 
 //Server Functions

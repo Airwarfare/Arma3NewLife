@@ -32,7 +32,6 @@ compileFinal"
 	_map ctrlMapAnimAdd [.5, 0.15, _pos];
 	ctrlMapAnimCommit _map;
 ";
-//_pos = call compile _pos;
 
 
 fnc_spawnPoint =
@@ -104,9 +103,49 @@ fnc_atm_menu =
 compileFinal"
 	if(isNull(findDisplay 39000)) then {
 		_ok = createDialog ""ATMBank"";
-		_bankAmount = (findDisplay 39000) displayCtrl 1001;
-		_cashAmount = (findDisplay 39000) displayCtrl 1000;
-		_bankAmount ctrlSetText format[""$%1"", playerInfo select 4];
-		_cashAmount ctrlSetText format[""$%1"", playerInfo select 5];
+		sleep 0.2;
+	};
+	_bankAmount = (findDisplay 39000) displayCtrl 1001;
+	_cashAmount = (findDisplay 39000) displayCtrl 1000;
+	_bankAmount ctrlSetText format[""$%1"", playerInfo select 4];
+	_cashAmount ctrlSetText format[""$%1"", playerInfo select 5];
+";
+
+fnc_atm_buttons =
+compileFinal"
+	TickTime1 = diag_tickTime;
+	_type = _this select 0;
+	_control = (findDisplay 39000) displayCtrl 1400;
+	_amount = ctrlText _control;
+	_amount = parseNumber(_amount);
+	if(_type == 0) then {
+		_cash = playerInfo select 5;
+		if(_amount <= _cash) then {
+			[getPlayerUID player, _amount, _cash, owner player] remoteExec [""server_fnc_cashToBank"", 2];
+			_bankAmount = (findDisplay 39000) displayCtrl 1001;
+			_cashAmount = (findDisplay 39000) displayCtrl 1000;
+			_b = playerInfo select 4;
+			_c = playerInfo select 5;
+			_bankAmount ctrlSetText format[""$%1"", (_b + _amount)];
+			_cashAmount ctrlSetText format[""$%1"", (_c - _amount)];
+		} else {
+			[""NOT ENOUGH CASH"", 0] call fnc_receive_notification;
+		};
+	}
+	else
+	{
+		_bank = playerinfo select 4;
+		_cash = playerInfo select 5;
+		if(_amount <= _bank) then {
+			[getPlayerUID player, _amount, _cash, owner player] remoteExec [""server_fnc_withdrawBank"", 2];
+			_bankAmount = (findDisplay 39000) displayCtrl 1001;
+			_cashAmount = (findDisplay 39000) displayCtrl 1000;
+			_b = playerInfo select 4;
+			_c = playerInfo select 5;
+			_bankAmount ctrlSetText format[""$%1"", (_b - _amount)];
+			_cashAmount ctrlSetText format[""$%1"", (_c + _amount)];
+		} else {
+			[""NOT ENOUGH MONEY IN THE BANK"", 0] call fnc_receive_notification;
+		};
 	};
 ";

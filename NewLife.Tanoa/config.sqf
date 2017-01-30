@@ -14,7 +14,5 @@ weight_moverestriction = 0; //In percentage, this is how much you will be slowed
 weight_modifier = 0; //In percentage, amount of extra weight per "slot" or "weight carry" of a backpack
 
 
-//Paychecks
-life_civ_paycheck = 0;
-life_cop_paycheck = 0; //Keep in mind this gets pulled from the banking system
-life_paycheck_interval = 500;
+//Cop Level Requirement
+cop_life_re = 5;

@@ -23,6 +23,7 @@ class ATMBank {
         	y = 0.533 * safezoneH + safezoneY;
         	w = 0.04125 * safezoneW;
         	h = 0.022 * safezoneH;
+            action = "[0] call fnc_atm_buttons";
         };
         class WithdrawButton: RscButton
         {
@@ -32,11 +33,12 @@ class ATMBank {
         	y = 0.533 * safezoneH + safezoneY;
         	w = 0.04125 * safezoneW;
         	h = 0.022 * safezoneH;
+            action = "[1] call fnc_atm_buttons";
         };
         class MoneyAmount: RscEdit
         {
         	idc = 1400;
-        	text = ""; //--- ToDo: Localize;
+        	text = "1"; //--- ToDo: Localize;
         	x = 0.45875 * safezoneW + safezoneX;
         	y = 0.5 * safezoneH + safezoneY;
         	w = 0.103125 * safezoneW;
