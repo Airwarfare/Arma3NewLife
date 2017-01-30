@@ -17,3 +17,7 @@ fnc_getShops = compile preprocessFile "Core\Functions\fnc_getShops.sqf";
 fnc_DMVAddAction = compile preprocessFile "Core\Functions\fnc_DMVAddAction.sqf";
 fnc_levelup = compile preprocessFile "Core\Functions\fnc_levelup.sqf";
 fnc_levelup_notfication = compile preprocessFile "Core\Functions\fnc_levelup_notfication.sqf";
+
+
+//Cop
+fnc_cop_ranks = copmile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";

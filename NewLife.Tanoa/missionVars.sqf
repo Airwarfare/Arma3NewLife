@@ -29,6 +29,8 @@ life_vip_level = nil;
 life_sides = ["Cop", "Civ", "Terror", "Medic"];
 life_side = nil;
 
+//CopInfo
+cop_rank = nil;
 
 // ["LicenseName", Price, Illegal, StoreArray]
 //Licenses

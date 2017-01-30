@@ -19,8 +19,9 @@ crime_rob_bounty = 0;
 crime_murder = 0;
 crime_murder_bounty = 0;
 
-//Spawns
-//X Y Z
-PlayerSpawns = [
-	[10, 10, 10]
+//Cop Rank Levels
+//
+cop_ranks = [
+	[5, "Recruit"],
+	[20, "Private"]
 ];
