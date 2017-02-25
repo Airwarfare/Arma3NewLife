@@ -17,7 +17,12 @@ fnc_getShops = compile preprocessFile "Core\Functions\fnc_getShops.sqf";
 fnc_DMVAddAction = compile preprocessFile "Core\Functions\fnc_DMVAddAction.sqf";
 fnc_levelup = compile preprocessFile "Core\Functions\fnc_levelup.sqf";
 fnc_levelup_notfication = compile preprocessFile "Core\Functions\fnc_levelup_notfication.sqf";
-
+fnc_DLCvalidation = compile preprocessFile "Core\Functions\fnc_DLCvalidation.sqf";
+fnc_zoneControl = compile preprocessFile "Core\Functions\fnc_zoneControl.sqf";
+fnc_drugManager = compile preprocessFile "Core\Civ\fnc_drugManager.sqf";
+fnc_safezone = compile preprocessFile "Core\Functions\fnc_safezone.sqf";
+fnc_factionHandle = compile preprocessFile "Core\Functions\fnc_factionHandle.sqf";
+fnc_realNames = compile preprocessFile "Core\Functions\fnc_realNames.sqf";
 
 //Cop
-fnc_cop_ranks = copmile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";
+fnc_cop_ranks = compile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";

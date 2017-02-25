@@ -47,6 +47,7 @@ waitUntil { scriptDone _script_handle };
 waitUntil {!(isNull (findDisplay 46))};
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call fnc_key_press"];
+player addEventHandler ["Fired", "_this call fnc_safezone"];
 //_ok = createDialog "spawn_menu";
 0 cutText ["", "BLACK IN"];
 diag_log format ["This is the client!"];
@@ -57,6 +58,7 @@ _server = [_uid, owner player] remoteExec ["sql_player_query", 2];
 [owner player] remoteExec ["sql_pos_query", 2];
 [owner player] remoteExec ["sql_server_query", 2];
 //["LifeLevel", 20, _uid, "playerinfo", owner player] remoteExec ["sql_generic_update", 2];
+sleep .1;
 [] call fnc_getShops;
 0 cutText["Setting Up Vars.....", "BLACK FADED"];
 0 cutFadeOut 9999999;
@@ -67,6 +69,7 @@ sleep 0.1;
 //38500
 _ok = createDialog "spawn_menu";
 [] call fnc_addSpawnPoints;
+[] call fnc_DLCvalidation;
 sleep 4;
 [] execVM "Core\init.sqf";
 //["Licenses", ["Testing how arrays work", 20, "20"], _uid] remoteExec ["sql_generic_update", 2];

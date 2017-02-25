@@ -8,8 +8,6 @@ _uid = _this select 1;
 _clientId = _this select 2;
 _added = false;
 _query = format["SELECT Vitems FROM playerInfo WHERE UID = '""%1""'", _uid] call sql_async_call;
-//_query = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['serverlife', 'SELECT Vitems FROM playerInfo WHERE UID = '%1'']", _uid];
-waitUntil{!_query == ""};
 _query = call compile _query;
 diag_log format ["RawQuery %1 %2", _query, typeName _query];
 _query = ((_query select 1) select 0) select 0;
@@ -17,7 +15,8 @@ _int = 0;
 {
     if((_x select 0) == (_ItemObject select 0)) then {
         _added = true;
-        _query set [_int, [_ItemObject select 0, format["%1", (_x select 1) + (_ItemObject select 1)]]];
+        //diag_log format["_x: %1 Type: %2", _x select 1, typeName(_x select 1)];
+        _query set [_int, [_ItemObject select 0, format["%1", parseNumber(_x select 1) + (_ItemObject select 1)]]];
     };
     _int = _int + 1;
 } forEach _query;

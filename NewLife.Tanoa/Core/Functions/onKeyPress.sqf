@@ -26,7 +26,7 @@ switch(_this select 1) do
 	//H
 	case 35:
 	{
-		["Gold", 2, getPlayerUID player, owner player] remoteExec ["sql_addVitem", 2];
+		[["Gold", 2], getPlayerUID player, owner player] remoteExec ["sql_addVitem", 2];
 	};
 	//F2 Debug
 	case 60:
@@ -62,6 +62,14 @@ switch(_this select 1) do
 				(_vel select 0) - (sin _dir * _speed),
 				(_vel select 1) - (cos _dir * _speed),
 				(_vel select 2)];
+		};
+	};
+
+	case 219:
+	{
+		if(CanDrug select 0) then {
+			[CanDrug select 1] call fnc_drugManager;
+			player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		};
 	};
 };

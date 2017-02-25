@@ -24,7 +24,10 @@ life_civ_level = nil;
 life_cop_level = nil;
 life_terror_level = nil;
 life_vip_level = nil;
-
+//LifeStuff
+SafeZone = false;
+WrongSide = nil;
+CanDrug = [false, ""];
 //Side
 life_sides = ["Cop", "Civ", "Terror", "Medic"];
 life_side = nil;

@@ -99,11 +99,39 @@ compileFinal"
 	} forEach _e;
 ";
 
+
+fnc_car_buy_menu = 
+compileFinal"
+	diag_log ""Working"";
+	if(isNull(findDisplay 50000)) then {
+		_ok = createDialog ""car_shop"";
+	};
+	_cars = [];
+	{
+		_valid = false;
+		{
+			if(_X == ""CarShop"") then {
+				_valid = true;
+			};
+		} forEach _x select 3;
+		if(_valid) then {
+			_cars + [_x];
+		};
+	} forEach car_config;
+
+	_control = (findDisplay 50000) displayCtrl 1500;
+	for [{_i = 0}, {_i < (count _cars), {_i = _i + 1}] do {
+		_control lbSetData [_i, (_cars select _i) select 0];
+		if(!isNull((_cars select _i) select 4)) then {
+			_control lbSetPicture [_i, (_cars select _i) select 4];
+		};
+	};
+";
+
 fnc_atm_menu =
 compileFinal"
 	if(isNull(findDisplay 39000)) then {
 		_ok = createDialog ""ATMBank"";
-		sleep 0.2;
 	};
 	_bankAmount = (findDisplay 39000) displayCtrl 1001;
 	_cashAmount = (findDisplay 39000) displayCtrl 1000;

@@ -62,6 +62,29 @@ class CfgHints
 			noImage = true;
 		};
 	};
+
+	class ZoneControl
+	{
+		displayName = "ZoneControl";
+		class SafeZone
+		{
+			displayName = "SafeZone";
+			displayNameShort = "<t color='#55f927'>SafeZone</t>";
+			description = "You have entered a safezone, your guns have been disabled";
+			noImage = true;
+		};
+
+		class FactionOnly
+		{
+			displayName = "%11";
+			displayNameShort = "%11";
+			description = "You cannot be in here because this is %11's zone please leave";
+			arguments[] = {
+				"[WrongSide] call fnc_realNames"
+			};
+			noImage = true;
+		}
+	};
 };
 
 class Params

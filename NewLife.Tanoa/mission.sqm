@@ -8,14 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=320;
+		nextID=322;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
 	};
 	class Camera
 	{
-		pos[]={5684.0962,64.260307,10313.88};
-		dir[]={0.43245175,-0.56759417,0.70076436};
-		up[]={0.29813409,0.82322758,0.48311314};
-		aside[]={0.85109288,-1.6880222e-007,-0.52522576};
+		pos[]={5654.1333,406.77957,10195.909};
+		dir[]={0.029204741,-0.98035026,0.19520736};
+		up[]={0.14505264,0.1973177,0.96954483};
+		aside[]={0.98901314,-7.0811802e-007,-0.14796495};
 	};
 };
 binarizationWanted=0;
@@ -23,13 +27,14 @@ addons[]=
 {
 	"A3_Characters_F_Exp",
 	"A3_Characters_F",
-	"A3_Characters_F_Exp_Civil"
+	"A3_Characters_F_Exp_Civil",
+	"A3_Ui_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			className="A3_Characters_F_Exp";
@@ -41,6 +46,13 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -183,7 +195,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=112;
+		items=114;
 		class Item0
 		{
 			dataType="Group";
@@ -6175,14 +6187,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5697.3403,3.7678623,10314.451};
+						position[]={5697.3398,3.7678525,10314.451};
 						angles[]={0,3.6234431,0};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
-						init="SHOP3 setVariable [""_shop"", [""BANK""], true]";
+						init="SHOP4 setVariable [""_shop"", [""BANK"", ""CARSHOP""], true]";
 						name="SHOP4";
 					};
 					id=319;
@@ -6216,6 +6228,32 @@ class Mission
 			{
 			};
 			id=318;
+		};
+		class Item112
+		{
+			dataType="Marker";
+			position[]={5635.6143,1.6991354e+029,10260.13};
+			name="marker_0";
+			markerType="ELLIPSE";
+			type="ellipse";
+			a=50;
+			b=50;
+			id=320;
+			atlOffset=1.6991354e+029;
+		};
+		class Item113
+		{
+			dataType="Trigger";
+			position[]={5635.5801,2.2281799,10260.013};
+			class Attributes
+			{
+				onActivation="[""drugs"", ""Unprocessed Cociane""] call fnc_zoneControl;";
+				sizeC=10;
+				repeatable=1;
+				activationBy="ANY";
+			};
+			id=321;
+			type="EmptyDetector";
 		};
 	};
 };

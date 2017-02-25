@@ -22,6 +22,11 @@ crime_murder_bounty = 0;
 //Cop Rank Levels
 //
 cop_ranks = [
-	[5, "Recruit"],
-	[20, "Private"]
+	[5, "Private"],
+	[20, "Corporal"],
+	[30, "Sergeant"],
+	[40, "Lieutenant"],
+	[60, "Captain"],
+	[80, "Major"],
+	[100, "Colonel"]
 ];
