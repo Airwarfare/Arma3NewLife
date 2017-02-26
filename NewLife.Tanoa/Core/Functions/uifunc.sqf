@@ -100,6 +100,7 @@ compileFinal"
 ";
 
 
+/*
 fnc_car_buy_menu = 
 compileFinal"
 	diag_log ""Working"";
@@ -127,6 +128,7 @@ compileFinal"
 		};
 	};
 ";
+*/
 
 fnc_atm_menu =
 compileFinal"

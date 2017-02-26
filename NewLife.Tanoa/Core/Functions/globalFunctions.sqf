@@ -23,6 +23,7 @@ fnc_drugManager = compile preprocessFile "Core\Civ\fnc_drugManager.sqf";
 fnc_safezone = compile preprocessFile "Core\Functions\fnc_safezone.sqf";
 fnc_factionHandle = compile preprocessFile "Core\Functions\fnc_factionHandle.sqf";
 fnc_realNames = compile preprocessFile "Core\Functions\fnc_realNames.sqf";
+fnc_car_buy_menu = compile preprocessFile "Core\Functions\fnc_car_buy_menu.sqf";
 
 //Cop
 fnc_cop_ranks = compile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";

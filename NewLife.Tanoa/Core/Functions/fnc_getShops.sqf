@@ -18,7 +18,7 @@ Purpose: Dynamically Adds all actions and menus to all shops
 				case "GARAGE": {_object addAction["<t color='#00C853'>Vehicle Garage</t>",{},[],1,false,false,"","",4];};
 				case "MARKET": {_object addAction["<t color='#00C853'>Market</t>",{},[],1,false,false,"","",4];};
 				case "BANK": {_object addAction["<t color='#FDD835'>Bank</t>", {[] call fnc_atm_menu},[],1,false,false,"","",4];};
-				case "CARSHOP": {_object addAction["<t color='#00C853'>Car Shop</t>",{_ok = createDialog "car_shop"; [] call fnc_car_buy_menu;},[],1,false,false,"","",4];};
+				case "CARSHOP": {_object addAction["<t color='#00C853'>Car Shop</t>",{[] call fnc_car_buy_menu;},[],1,false,false,"","",4];};
 				case "GENERALSTORE";
 			};
 		};

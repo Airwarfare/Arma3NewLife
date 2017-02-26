@@ -58,7 +58,7 @@ _server = [_uid, owner player] remoteExec ["sql_player_query", 2];
 [owner player] remoteExec ["sql_pos_query", 2];
 [owner player] remoteExec ["sql_server_query", 2];
 //["LifeLevel", 20, _uid, "playerinfo", owner player] remoteExec ["sql_generic_update", 2];
-sleep .1;
+sleep .15;
 [] call fnc_getShops;
 0 cutText["Setting Up Vars.....", "BLACK FADED"];
 0 cutFadeOut 9999999;
