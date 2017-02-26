@@ -34,6 +34,8 @@ for [{_i = 0}, {_i < (count _cars), {_i = _i + 1}] do {
 
 _count = 0;
 {
+
+    //test
     _text = format["%1", _x select 0];
     _index = _contorl lbAdd _text;
     _data = lbSetData [1500, _index, _x select 1];
