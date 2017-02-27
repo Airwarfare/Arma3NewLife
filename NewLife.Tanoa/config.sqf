@@ -58,14 +58,14 @@ items_un_pro = [
 items_pre_pro = [
     ["Cocaine", 1, 15000, [""]],
     ["Cement", 4, 6000, [""]],
-    ["Marble", 10, 12000, [""]]
+    ["Marble", 10, 12000, [""]],
     ["Weed", 1, 10000, [""]],
     ["Plywood Stack", 4, 100, [""]],
     ["Diamonds", 15, 500000, [""]],
     ["Iron", 15, 100000,[""]],
     ["Meth", 1, 25000, [""]],
     ["Metal", 20, 75, ["Car Parts"]],
-    ["Grandma's Pastry", 4, 60 [""]],
+    ["Grandma's Pastry", 4, 60, [""]],
     ["Car Parts", 15, 200, [""]],
     ["Caviar", 1, 20000, [""]],
     ["Whale Meat", 50, 1000, [""]],
@@ -88,11 +88,9 @@ car_config = [
     ["SUV", "C_SUV_01_F", 2500, ["CarShop"]],
     ["Hatchback", "C_Hatchback_01_F", 3500, ["CarShop"]],
     ["Van", "C_Van_01_transport_F", 5000, ["CarShop"]],
-
     ["Armed Offroad", "I_G_Offroad_01_armed_F", 100000, ["Swat", "Terrorist"]],
     ["MG Armed MRAP", "I_MRAP_03_hmg_F", 1000000, ["Swat", "Terrorist"]],
-
-    ["Cop Quadbike", "B_G_Quadbike_01_F", 1000 ["Swat"]],
+    ["Cop Quadbike", "B_G_Quadbike_01_F", 1000, ["Swat"]],
     ["Cop Offroad", "C_Offroad_01_blue_F", 2000, ["Swat"]],
     ["Cop Hatchback", "C_Hatchback_01_blue_F", 3500, ["Swat"]],
     ["Cop Sport Hatchback", "C_Hatchback_01_sport_blue_F", 10000, ["CopShop"]],
