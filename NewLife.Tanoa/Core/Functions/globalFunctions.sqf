@@ -24,6 +24,8 @@ fnc_safezone = compile preprocessFile "Core\Functions\fnc_safezone.sqf";
 fnc_factionHandle = compile preprocessFile "Core\Functions\fnc_factionHandle.sqf";
 fnc_realNames = compile preprocessFile "Core\Functions\fnc_realNames.sqf";
 fnc_car_info = compile preprocessFile "Core\Functions\fnc_car_info.sqf";
+fnc_car_buy = compile preprocessFile "Core\Functions\fnc_car_buy.sqf";
+fnc_marker_find = compile preprocessFile "Core\Functions\fnc_marker_find.sqf";
 
 //Cop
 fnc_cop_ranks = compile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";
