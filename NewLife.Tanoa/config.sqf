@@ -80,7 +80,7 @@ items_pre_pro = [
 
 //Cars
 //Car Format
-//["Name", "VehicleName", Price, [Shops], "Image"]
+//["Name", "VehicleName", Price, [Shops], VirtualStorage]
 car_config = [
     ["Offroad", "C_Offroad_01_F", 2000, ["CarShop"]],
     ["Sport Hatchback", "C_Hatchback_01_sport_F", 10000, ["CarShop"]],
