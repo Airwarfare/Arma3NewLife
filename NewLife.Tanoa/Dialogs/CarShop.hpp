@@ -44,13 +44,13 @@ class car_shop {
             onLBSelChanged= "_this call fnc_car_info";
         };
 
-        class CarInfo: RscText
+        class CarInfo: RscStructuredText
         {
             idc = 1001;
             text = "Info"; //--- ToDo: Localize;
             x = 0.525781 * safezoneW + safezoneX;
             y = 0.368 * safezoneH + safezoneY;
-            w = 0.04125 * safezoneW;
+            w = 0.06125 * safezoneW;
             h = 0.22 * safezoneH;
         };
 
@@ -72,7 +72,7 @@ class car_shop {
             y = 0.599 * safezoneH + safezoneY;
             w = 0.04125 * safezoneW;
             h = 0.022 * safezoneH;
-            action = "";
+            action = "call fnc_car_buy";
         };
     };
 };

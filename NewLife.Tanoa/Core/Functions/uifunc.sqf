@@ -124,9 +124,12 @@ compileFinal"
 	_count = 0;
 	{
 		_picture = getText(configFile >> ""CfgVehicles"" >> (_x select 1) >> ""picture"");
-		_text = format[""<img image=%2 />%1"", _x select 0, _picture];
+		_text = _x select 0;
 		_index = _control lbAdd _text;
-		_data = lbSetData [1500, _index, [_x select 1, _x select 4]];
+		_control lbSetPicture[_index, _picture];
+		_array = [_x select 1, _x select 4];
+		_dataSet = format[""%1"", _array];
+		_data = lbSetData [1500, _index, _dataSet];
 		_count = _count + 1;
 	} forEach _cars;
 	_control lbSetCurSel 0;

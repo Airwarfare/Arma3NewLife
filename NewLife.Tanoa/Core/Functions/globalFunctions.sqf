@@ -26,6 +26,7 @@ fnc_realNames = compile preprocessFile "Core\Functions\fnc_realNames.sqf";
 fnc_car_info = compile preprocessFile "Core\Functions\fnc_car_info.sqf";
 fnc_car_buy = compile preprocessFile "Core\Functions\fnc_car_buy.sqf";
 fnc_marker_find = compile preprocessFile "Core\Functions\fnc_marker_find.sqf";
+fnc_keyManager = compile preprocessFile "Core\Vehicles\fnc_keyManager.sqf";
 
 //Cop
 fnc_cop_ranks = compile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";

@@ -82,19 +82,19 @@ items_pre_pro = [
 //Car Format
 //["Name", "VehicleName", Price, [Shops], VirtualStorage]
 car_config = [
-    ["Offroad", "C_Offroad_01_F", 2000, ["CarShop"]],
-    ["Sport Hatchback", "C_Hatchback_01_sport_F", 10000, ["CarShop"]],
-    ["Quadbike", "C_Quadbike_01_F", 1000, ["CarShop"]],
-    ["SUV", "C_SUV_01_F", 2500, ["CarShop"]],
-    ["Hatchback", "C_Hatchback_01_F", 3500, ["CarShop"]],
-    ["Van", "C_Van_01_transport_F", 5000, ["CarShop"]],
-    ["Armed Offroad", "I_G_Offroad_01_armed_F", 100000, ["Swat", "Terrorist"]],
-    ["MG Armed MRAP", "I_MRAP_03_hmg_F", 1000000, ["Swat", "Terrorist"]],
-    ["Cop Quadbike", "B_G_Quadbike_01_F", 1000, ["Swat"]],
-    ["Cop Offroad", "C_Offroad_01_blue_F", 2000, ["Swat"]],
-    ["Cop Hatchback", "C_Hatchback_01_blue_F", 3500, ["Swat"]],
-    ["Cop Sport Hatchback", "C_Hatchback_01_sport_blue_F", 10000, ["CopShop"]],
-    ["Cop SUV", "SUV_01_base_grey_F", 2500, ["CopShop"]]
+    ["Offroad", "C_Offroad_01_F", 2000, ["CarShop"], 1000],
+    ["Sport Hatchback", "C_Hatchback_01_sport_F", 10000, ["CarShop"], 1000],
+    ["Quadbike", "C_Quadbike_01_F", 1000, ["CarShop"], 1000],
+    ["SUV", "C_SUV_01_F", 2500, ["CarShop"], 1000],
+    ["Hatchback", "C_Hatchback_01_F", 3500, ["CarShop"], 1000],
+    ["Van", "C_Van_01_transport_F", 5000, ["CarShop"], 1000],
+    ["Armed Offroad", "I_G_Offroad_01_armed_F", 100000, ["Swat", "Terrorist"], 1000],
+    ["MG Armed MRAP", "I_MRAP_03_hmg_F", 1000000, ["Swat", "Terrorist"], 1000],
+    ["Cop Quadbike", "B_G_Quadbike_01_F", 1000, ["Swat"], 1000],
+    ["Cop Offroad", "C_Offroad_01_blue_F", 2000, ["Swat"], 1000],
+    ["Cop Hatchback", "C_Hatchback_01_blue_F", 3500, ["Swat"], 1000],
+    ["Cop Sport Hatchback", "C_Hatchback_01_sport_blue_F", 10000, ["CopShop"], 1000],
+    ["Cop SUV", "SUV_01_base_grey_F", 2500, ["CopShop"], 1000]
 ];
 
 // ["LicenseName", Price, Illegal, StoreArray]

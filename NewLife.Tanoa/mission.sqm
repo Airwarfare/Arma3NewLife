@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=322;
+		nextID=323;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={5654.1333,406.77957,10195.909};
-		dir[]={0.029204741,-0.98035026,0.19520736};
-		up[]={0.14505264,0.1973177,0.96954483};
-		aside[]={0.98901314,-7.0811802e-007,-0.14796495};
+		pos[]={5672.3101,46.961716,10294.887};
+		dir[]={0.032498151,-0.98212105,0.18543217};
+		up[]={0.16954097,0.18818355,0.96738964};
+		aside[]={0.98498875,7.5960997e-009,-0.17262533};
 	};
 };
 binarizationWanted=0;
@@ -195,7 +195,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=114;
+		items=115;
 		class Item0
 		{
 			dataType="Group";
@@ -6247,13 +6247,21 @@ class Mission
 			position[]={5635.5801,2.2281799,10260.013};
 			class Attributes
 			{
-				onActivation="[""drugs"", ""Unprocessed Cociane""] call fnc_zoneControl;";
+				onActivation="[""factiononly"", west, 50, [5635.58, 10260.013, 0]] call fnc_zoneControl;";
 				sizeC=10;
 				repeatable=1;
 				activationBy="ANY";
 			};
 			id=321;
 			type="EmptyDetector";
+		};
+		class Item114
+		{
+			dataType="Marker";
+			position[]={5676.1704,3.3253002,10315.871};
+			name="carspawn_1";
+			type="Empty";
+			id=322;
 		};
 	};
 };

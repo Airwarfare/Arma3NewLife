@@ -8,4 +8,4 @@ _u = (playerInfo select 4) + _value;
 if(_u < 0) then {
 	_u = 0;
 };
-["Bank", _u, getPlayerUID player, "playerinfo"] remoteExec ["sql_generic_update", 2];
+["Bank", _u, getPlayerUID player, "playerinfo", owner player] remoteExec ["sql_generic_update", 2];
