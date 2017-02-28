@@ -23,6 +23,30 @@ switch(_this select 1) do
 			[] call fnc_player_menu;
 		};
 	};
+	//U
+	case 22:
+	{
+		if (isNull objectParent player) then {
+                _veh = cursorObject;
+		} else {
+                _veh = vehicle player;
+		};
+		_var = _veh getVariable "Owner";
+		if(isNil _var) exitWith { };
+		_isOwner = {
+			if(_x == _var %% getPlayerUID player find _var) exitWith {
+				true;
+			};
+		} forEach _keychain;
+		if(_isOwner) then {
+			_lockState = locked _veh;
+			switch(_lockState) do
+			{
+				case 0: {_veh setVehicleLock "LOCKED"; systemChat "Vehicle Locked";};
+				case 2: {_veh setVehicleLock "UNLOCKED"; systemChat "Vehicle Unlocked";};
+			};
+		};
+	};
 	//H
 	case 35:
 	{

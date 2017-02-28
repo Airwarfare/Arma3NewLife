@@ -82,19 +82,19 @@ items_pre_pro = [
 //Car Format
 //["Name", "VehicleName", Price, [Shops], VirtualStorage]
 car_config = [
-    ["Offroad", "C_Offroad_01_F", 2000, ["CarShop"], 1000],
-    ["Sport Hatchback", "C_Hatchback_01_sport_F", 10000, ["CarShop"], 1000],
-    ["Quadbike", "C_Quadbike_01_F", 1000, ["CarShop"], 1000],
-    ["SUV", "C_SUV_01_F", 2500, ["CarShop"], 1000],
-    ["Hatchback", "C_Hatchback_01_F", 3500, ["CarShop"], 1000],
-    ["Van", "C_Van_01_transport_F", 5000, ["CarShop"], 1000],
-    ["Armed Offroad", "I_G_Offroad_01_armed_F", 100000, ["Swat", "Terrorist"], 1000],
-    ["MG Armed MRAP", "I_MRAP_03_hmg_F", 1000000, ["Swat", "Terrorist"], 1000],
-    ["Cop Quadbike", "B_G_Quadbike_01_F", 1000, ["Swat"], 1000],
-    ["Cop Offroad", "C_Offroad_01_blue_F", 2000, ["Swat"], 1000],
-    ["Cop Hatchback", "C_Hatchback_01_blue_F", 3500, ["Swat"], 1000],
-    ["Cop Sport Hatchback", "C_Hatchback_01_sport_blue_F", 10000, ["CopShop"], 1000],
-    ["Cop SUV", "SUV_01_base_grey_F", 2500, ["CopShop"], 1000]
+    ["Offroad", "C_Offroad_01_F", 2000, ["CarShop"], 500],
+    ["Sport Hatchback", "C_Hatchback_01_sport_F", 10000, ["CarShop"], 250],
+    ["Quadbike", "C_Quadbike_01_F", 1000, ["CarShop"], 100],
+    ["SUV", "C_SUV_01_F", 2500, ["CarShop"], 300],
+    ["Hatchback", "C_Hatchback_01_F", 3500, ["CarShop"], 200],
+    ["Van", "C_Van_01_transport_F", 5000, ["CarShop"], 750],
+    ["Armed Offroad", "I_G_Offroad_01_armed_F", 100000, ["Swat", "Terrorist"], 400],
+    ["MG Armed MRAP", "I_MRAP_03_hmg_F", 1000000, ["Swat", "Terrorist"], 500],
+    ["Cop Quadbike", "B_G_Quadbike_01_F", 1000, ["Swat"], 100],
+    ["Cop Offroad", "C_Offroad_01_blue_F", 2000, ["Swat"], 500],
+    ["Cop Hatchback", "C_Hatchback_01_blue_F", 3500, ["Swat"], 200],
+    ["Cop Sport Hatchback", "C_Hatchback_01_sport_blue_F", 10000, ["CopShop"], 250],
+    ["Cop SUV", "SUV_01_base_grey_F", 2500, ["CopShop"], 300]
 ];
 
 // ["LicenseName", Price, Illegal, StoreArray]
@@ -160,8 +160,42 @@ life_crimes = [
 
 //["Name", Weight, Illegal, ImagePath]
 life_virtual_items = [
-	["Gold", 10, false, ""],
-	["Pickaxe", 4, false, ""],
-	["Apple", 1, false, ""],
-	["Bacon", 1, false, ""]
+    ["Gold", 10, false, ""],
+    ["Pickaxe", 4, false, ""],
+    ["Apple", 1, false, ""],
+    ["Bacon", 1, false, ""],
+    ["Unprocessed Cocaine", 1, true, ""],
+    ["Unprocessed Weed", 1, true, ""],
+    ["Lumber", 4, false, ""],
+    ["Unprocessed Diamonds", 20, false, ""],
+    ["Unprocessed Iron", 20, false, ""],
+    ["Unprocessed Meth", 2, true, ""],
+    ["Scrap Metal", 12, false, ""],
+    ["Unprocessed Caviar", 1, false, ""],
+    ["Unprocessed Whale", 50, true, ""],
+    ["Unprocessed Salmon", 5, false, ""],
+    ["Unprocessed Tuna", 3, false, ""],
+    ["Stone", 4, false, ""],
+    ["Unprocessed Wild Boar", 5, false, ""],
+    ["Unprocessed Wild Deer", 5, false, ""],
+    ["Unprocessed Wild Horse", 6, false, ""],
+    ["Cocaine", 1, true, ""],
+    ["Cement", 4, false, ""],
+    ["Marble", 10, false, ""],
+    ["Weed", 1, true, ""],
+    ["Plywood Stack", 4, false, ""],
+    ["Diamonds", 15, false, ""],
+    ["Iron", 15, false, ""],
+    ["Meth", 1, true, ""],
+    ["Metal", 20, false, ""],
+    ["Grandma's Pastry", 4, false, ""],
+    ["Car Parts", 15, false, ""],
+    ["Caviar", 1, false, ""],
+    ["Whale Meat", 50, true, ""],
+    ["Salmon", 5, false, ""],
+    ["Canned Tuna", 2, false, ""],
+    ["Pork", 5, false, ""],
+    ["Deep Jerky", 5, false, ""],
+    ["Tub of McDonald Meat", 6, false, ""],
+    ["McDonalds Hamburger", 3, false, ""]
 ];
