@@ -199,3 +199,8 @@ life_virtual_items = [
     ["Tub of McDonald Meat", 6, false, ""],
     ["McDonalds Hamburger", 3, false, ""]
 ];
+
+//Format["ItemIndex", Buy, Sell, ["ShopArray"]]
+life_shop_items = [
+    [life_virtual_items select 0, 50000, 25000, [""]]
+];
