@@ -30,3 +30,6 @@ cop_ranks = [
 	[80, "Major"],
 	[100, "Colonel"]
 ];
+
+//ServerInfo
+server_info = nil;

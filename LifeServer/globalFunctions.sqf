@@ -15,6 +15,7 @@ sql_license_update = compile preprocessFile "LifeServer\SQL\Functions\sql_licens
 sql_pos_query = compile preprocessFile "LifeServer\SQL\Functions\sql_pos_query.sqf";
 sql_addVitem = compile preprocessFile "LifeServer\SQL\Functions\sql_addVitem.sqf";
 sql_getVitem = compile preprocessFile "LifeServer\SQL\Functions\sql_getVitem.sqf";
+sql_private_server_info = compile preprocessFile "LifeServer\SQL\Functions\sql_private_server_info.sqf";
 
 
 

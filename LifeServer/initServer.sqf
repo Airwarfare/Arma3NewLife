@@ -9,7 +9,7 @@ _result = "extDB3" callExtension "9:ADD_DATABASE:ServerLife";
 diag_log _result;
 sleep .02;
 _query = "extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:ServerLife:SQL:SQL";
-
+[] call sql_private_server_info;
 ServerIsDone = true;
 publicVariable "ServerIsDone";
 //Start Paychecks

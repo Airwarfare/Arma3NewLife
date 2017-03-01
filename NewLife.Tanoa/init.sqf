@@ -22,6 +22,7 @@ TickTime2 = nil;
 //Testing
 waitUntil { scriptDone _mission };
 [] execVM "config.sqf";
+[owner player] remoteExec ["sql_server_query", 2];
 switch(_side) do
 {
 	case west:
@@ -43,6 +44,7 @@ switch(_side) do
 //[] call compile preprocessFileLineNumbers "Core\Functions\func.sqf";
 _script_handle = [] execVM "Core\Functions\globalFunctions.sqf";
 waitUntil { scriptDone _script_handle };
+[] call fnc_isRebel;
 [] call compile preprocessFileLineNumbers "Core\Functions\uifunc.sqf";
 waitUntil {!(isNull (findDisplay 46))};
 
@@ -56,7 +58,6 @@ diag_log format ["This is the client!"];
 waitUntil { isUniqueDone };
 _server = [_uid, owner player] remoteExec ["sql_player_query", 2];
 [owner player] remoteExec ["sql_pos_query", 2];
-[owner player] remoteExec ["sql_server_query", 2];
 //["LifeLevel", 20, _uid, "playerinfo", owner player] remoteExec ["sql_generic_update", 2];
 sleep .15;
 [] call fnc_getShops;
