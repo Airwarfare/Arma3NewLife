@@ -35,4 +35,4 @@ life_side = nil;
 //CopInfo
 cop_rank = nil;
 
-_keychain = [];
+keychain = [];
