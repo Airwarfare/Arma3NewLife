@@ -1,7 +1,7 @@
 /*
 Author: Airwarfare
 Purpose: Manages Keys And Ownership
-Method Signature()
+Method Signature("Type", PlayerObject)
 */
 _type = _this select 0;
 _uid = getPlayerUID player;
@@ -11,10 +11,10 @@ switch (_type) do {
         _keyGen = _uid + format["%1", floor(random[4000, 10000, 100000])];
     };
     case "remove": {
-
+        
     };
     case "give": {
-
+        
     };
 };
 _keyGen;
