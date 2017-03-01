@@ -15,7 +15,10 @@ Purpose: Dynamically Adds all actions and menus to all shops
 				case "DMV": {[_object] call fnc_DMVAddAction;};
 				case "DEV": {_object addAction ["<t color='#00C853'>DEV</t>", {hint "DEV STUFF"}, [], 1, false, false, "", "", 4];};
 				case "HELI": {_object addAction ["<t color='#00C853'>Helicopter Shop</t>",{},[],1,false,false,"","",4];};
-				case "GARAGE": {_object addAction["<t color='#00C853'>Vehicle Garage</t>",{},[],1,false,false,"","",4];};
+				case "GARAGE": {
+					_object addAction["<t color='#00C853'>Put In Garage</t>",{},[],1,false,false,"","",4];
+					_object addAction["<t color='#00C853'>Vehicle Garage</t>",{},[],1,false,false,"","",4];
+				};
 				case "MARKET": {_object addAction["<t color='#00C853'>Market</t>",{},[],1,false,false,"","",4];};
 				case "BANK": {_object addAction["<t color='#FDD835'>Bank</t>", {[] call fnc_atm_menu},[],1,false,false,"","",4];};
 				case "CARSHOP": {_object addAction["<t color='#00C853'>Car Shop</t>",{[] call fnc_car_buy_menu;},[],1,false,false,"","",4];};

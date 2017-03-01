@@ -22,5 +22,6 @@ if((playerInfo select 4) >= (_carObject select 2)) then {
     _keyValue = ["generate"] call fnc_keyManager;
     _vehicle = _vehicleClass createVehicle getMarkerPos _marker;
     _vehicle setVariable ["Owner", _keyValue, true];
+    _vehicle setVehicleLock "LOCKED";
     keychain = keychain + [_keyValue];
 };

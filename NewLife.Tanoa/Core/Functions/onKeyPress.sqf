@@ -26,20 +26,29 @@ switch(_this select 1) do
 	//U
 	case 22:
 	{
+		_veh = nil;
+		_var = "";
 		if (isNull objectParent player) then {
-                _veh = cursorObject;
+				diag_log "_veh";
+                _veh = cursorTarget;
 		} else {
                 _veh = vehicle player;
 		};
 		_var = _veh getVariable "Owner";
-		if(isNil _var) exitWith { };
-		_isOwner = {
-			if(_x == _var %% getPlayerUID player find _var) exitWith {
-				true;
+		diag_log format["Veh: %1 Var: %2", _veh, _var];
+		if(_var == "") exitWith {};
+		_isOwner = false;
+		{
+			diag_log format["_x: %1 _var: %2", _x, _var];
+			if(_x find getPlayerUID player != -1 && _x == _var) then {
+				diag_log "FoundKey";
+				_isOwner = true;
 			};
-		} forEach _keychain;
+		} forEach keychain;
+		diag_log format["ISOwner: %1", _isOwner];
 		if(_isOwner) then {
 			_lockState = locked _veh;
+			diag_log _lockState;
 			switch(_lockState) do
 			{
 				case 0: {_veh setVehicleLock "LOCKED"; systemChat "Vehicle Locked";};
