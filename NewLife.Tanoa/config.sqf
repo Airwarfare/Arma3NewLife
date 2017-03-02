@@ -204,3 +204,9 @@ life_virtual_items = [
 life_shop_items = [
     [life_virtual_items select 0, 50000, 25000, [""]]
 ];
+
+
+//Format["ClassName", Buy, Sell, ["ShopArray"]]
+life_weapons = [
+    ["srifle_DMR_01_ACO_F", 20000, 10000, ["Terrorist"]]
+];

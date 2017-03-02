@@ -12,5 +12,6 @@ _query = "extDB3" callExtension "9:ADD_DATABASE_PROTOCOL:ServerLife:SQL:SQL";
 [] call sql_private_server_info;
 ServerIsDone = true;
 publicVariable "ServerIsDone";
+[] call s_spawn_man;
 //Start Paychecks
 [] call server_fnc_paychecks;

@@ -30,3 +30,4 @@ server_fnc_paychecks = compile preprocessFile "LifeServer\GameLogic\Economy\serv
 //Server Functions
 debug = compile preprocessFile "LifeServer\debug.sqf";
 s_find_player_object = compile preprocessFile "LifeServer\GameLogic\Functions\s_find_player_object.sqf";
+s_spawn_man = compile preprocessFile "LifeServer\GameLogic\Functions\s_spawn_man.sqf";

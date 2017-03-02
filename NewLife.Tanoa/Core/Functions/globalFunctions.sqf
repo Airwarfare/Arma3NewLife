@@ -27,6 +27,8 @@ fnc_car_buy = compile preprocessFile "Core\Functions\fnc_car_buy.sqf";
 fnc_marker_find = compile preprocessFile "Core\Functions\fnc_marker_find.sqf";
 fnc_keyManager = compile preprocessFile "Core\Vehicles\fnc_keyManager.sqf";
 fnc_isRebel = compile preprocessFile "Core\Civ\fnc_isRebel.sqf";
+fnc_civToRebel = compile preprocessFile "Core\Civ\fnc_civToRebel.sqf";
+fnc_rebelAction = compile preprocessFile "Core\Civ\fnc_rebelAction.sqf";
 
 //Cop
 fnc_cop_ranks = compile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";

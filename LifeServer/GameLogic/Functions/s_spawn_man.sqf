@@ -10,8 +10,10 @@ while (true) do {
     sleep 120;
     _array = server_info select 0;
     _pos = selectRandom _array;
-    _currentMan = "" createVehicle _pos;
-    //Add Actions
+    _currentMan = "C_Nikos" createVehicle _pos;
+    _currentMan enableSimulation false;
+    _currentMan allowDamage false;
+    [_currentMan] call remoteExec["fnc_rebelAction", -2];
 
     sleep 2640;
 };
