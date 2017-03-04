@@ -157,7 +157,7 @@ compileFinal"
 	if(_type == 0) then {
 		_cash = playerInfo select 5;
 		if(_amount <= _cash) then {
-			[getPlayerUID player, _amount, _cash, owner player] remoteExec [""server_fnc_cashToBank"", 2];
+			[getPlayerUID player, _amount, _cash, clientOwner] remoteExec [""server_fnc_cashToBank"", 2];
 			_bankAmount = (findDisplay 39000) displayCtrl 1001;
 			_cashAmount = (findDisplay 39000) displayCtrl 1000;
 			_b = playerInfo select 4;
@@ -173,7 +173,7 @@ compileFinal"
 		_bank = playerinfo select 4;
 		_cash = playerInfo select 5;
 		if(_amount <= _bank) then {
-			[getPlayerUID player, _amount, _cash, owner player] remoteExec [""server_fnc_withdrawBank"", 2];
+			[getPlayerUID player, _amount, _cash, clientOwner] remoteExec [""server_fnc_withdrawBank"", 2];
 			_bankAmount = (findDisplay 39000) displayCtrl 1001;
 			_cashAmount = (findDisplay 39000) displayCtrl 1000;
 			_b = playerInfo select 4;
@@ -208,4 +208,32 @@ compileFinal"
 	diag_log format[""%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11"", _scope, _picture, _displayName, _vehicleClass, _side, _faction, _speed, _armor, _seats, _hp, _fuel];
 	_control = (findDisplay 50000) displayCtrl 1001;
 	_control ctrlSetStructuredText parseText format[""Speed: %1<br />Armor: %2<br />Seats: %3<br />Fuel Capacity: %4<br />Weight Capacity: %5"", _speed, _armor, _seats + 1, _fuel, _array select 1];
+";
+
+fnc_car_buy =
+compileFinal"
+	_control = (findDisplay 50000) displayCtrl 1500;
+	_index = lbCurSel _control;
+	_array = lbData [1500, _index];
+	_array = call compile _array;
+	_vehicleClass = _array select 0;
+	_marker = [""carspawn""] call fnc_marker_find;
+	if(_marker == nil) then {
+		diag_log format[""Marker Error""];
+	};
+	_carObject = nil;
+	{
+		if(_x select 1 == _vehicleClass) then {
+			_carObject = _x;
+		};
+	} forEach car_config;
+
+	if((playerInfo select 4) >= (_carObject select 2)) then {
+		[(_carObject select 2) * -1] call fnc_update_bank_value;
+		_keyValue = [""generate""] call fnc_keyManager;
+		_vehicle = _vehicleClass createVehicle getMarkerPos _marker;
+		_vehicle setVariable [""Owner"", _keyValue, true];
+		_vehicle setVehicleLock ""LOCKED"";
+		keychain = keychain + [_keyValue];
+	};
 ";

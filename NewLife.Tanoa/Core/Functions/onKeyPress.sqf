@@ -60,14 +60,14 @@ switch(_this select 1) do
 	//H
 	case 35:
 	{
-		[["Gold", 2], getPlayerUID player, owner player] remoteExec ["sql_addVitem", 2];
+		[["Gold", 2], getPlayerUID player, clientOwner] remoteExec ["sql_addVitem", 2];
 	};
 	//F2 Debug
 	case 60:
 	{
 		hint format["array %1", playerInfo select 13];
 		_uid = getPlayerUID player;
-		[_uid, (life_licenses select 1), true, owner player] remoteExec ["sql_license_update", 2];
+		[_uid, (life_licenses select 1), true, clientOwner] remoteExec ["sql_license_update", 2];
 	};
 	//SHIFTL
 	case 42:

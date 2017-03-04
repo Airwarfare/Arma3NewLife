@@ -4,9 +4,6 @@ Purpose: Spawns a man at a random location defined in the database
 */
 TheMan = nil;
 while {true} do {
-    if(!(isNil _currentMan)) then {
-        deleteVehicle _currentMan;
-    };
     sleep 2;
     _array = server_info select 0;
     _pos = selectRandom _array;
@@ -18,6 +15,6 @@ while {true} do {
     publicVariable "TheMan";
     diag_log format["CurrentMan: %1", TheMan];
     [] remoteExec["fnc_rebelAction", -2];
-
     sleep 2640;
+    deleteVehicle TheMan;
 };
