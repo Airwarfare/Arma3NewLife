@@ -8,6 +8,7 @@ _class = _this select 1;
 _damage = _this select 2;
 _vitems = _this select 3;
 _skin = _this select 4;
+_key = _this select 6;
 if(isNil _vitems) then { _vitems = ""; };
 if(isNil _skin) then { _skin = ""; };
 _randomNumber = nil;
@@ -18,4 +19,4 @@ while {true} do {
         _randomNumber = _r;
     };
 };
-_update = "extDB3" callExtension format["1:SQL:INSERT INTO vehiclegarage (ownerUID, vehicleClass, vehicleDamage, vehicleVitems, vehicleSkin, vehicleID) VALUES ('""%1""', '""%2""', '""%3""', '""%4""', '""%5""', '""%6""')", _uid, _class, _damage, _vitems, _skin, _randomNumber];
+_update = "extDB3" callExtension format["1:SQL:INSERT INTO vehiclegarage (ownerUID, vehicleClass, vehicleDamage, vehicleVitems, vehicleSkin, vehicleID, vehicleKey) VALUES ('""%1""', '""%2""', '""%3""', '""%4""', '""%5""', '""%6""', '""%7""')", _uid, _class, _damage, _vitems, _skin, _randomNumber, _key];
