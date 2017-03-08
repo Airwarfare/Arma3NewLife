@@ -2,3 +2,4 @@
 #include "PlayerMenu.hpp"
 #include "BankMenu.hpp"
 #include "CarShop.hpp"
+#include "GarageMenu.hpp"

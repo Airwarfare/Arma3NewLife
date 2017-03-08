@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5693.8506,151.23022,10258.328};
-		dir[]={-0.45414269,-0.85026622,0.26609489};
-		up[]={-0.73364884,0.52628517,0.42986545};
-		aside[]={0.50554168,-9.3132257e-010,0.86280549};
+		pos[]={5696.1768,84.150635,10278.938};
+		dir[]={-0.080259591,-0.94201195,0.32585207};
+		up[]={-0.22529726,0.33550456,0.91470218};
+		aside[]={0.97098488,-7.7998266e-008,0.2391606};
 	};
 };
 binarizationWanted=0;
@@ -6194,7 +6194,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="SHOP4 setVariable [""_shop"", [""BANK""], true]";
+						init="SHOP4 setVariable [""_shop"", [""BANK"", ""CARSHOP""], true]";
 						name="SHOP4";
 					};
 					id=319;
@@ -6259,10 +6259,11 @@ class Mission
 		class Item114
 		{
 			dataType="Marker";
-			position[]={5676.1704,3.3253002,10315.871};
-			name="carshop_1";
+			position[]={5676.1699,1.1816797e+035,10315.871};
+			name="carspawn_1";
 			type="Empty";
 			id=322;
+			atlOffset=1.1816797e+035;
 		};
 	};
 };
