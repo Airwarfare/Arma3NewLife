@@ -29,6 +29,7 @@ fnc_isRebel = compile preprocessFile "Core\Civ\fnc_isRebel.sqf";
 fnc_civToRebel = compile preprocessFile "Core\Civ\fnc_civToRebel.sqf";
 fnc_rebelAction = compile preprocessFile "Core\Civ\fnc_rebelAction.sqf";
 fnc_vehicleToGarage = compile preprocessFile "Core\Functions\fnc_vehicleToGarage.sqf";
+fnc_receiveCar = compile preprocessFile "Core\Functions\fnc_receiveCar.sqf";
 
 //Cop
 fnc_cop_ranks = compile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";

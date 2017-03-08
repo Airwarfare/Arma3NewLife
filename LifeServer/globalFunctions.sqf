@@ -17,6 +17,7 @@ sql_addVitem = compile preprocessFile "LifeServer\SQL\Functions\sql_addVitem.sqf
 sql_getVitem = compile preprocessFile "LifeServer\SQL\Functions\sql_getVitem.sqf";
 sql_private_server_info = compile preprocessFile "LifeServer\SQL\Functions\sql_private_server_info.sqf";
 sql_addVehicleToGarage = compile preprocessFile "LifeServer\SQL\Functions\sql_addVehicleToGarage.sqf";
+sql_grabVehicle = compile preprocessFile "LifeServer\SQL\Functions\sql_grabVehicle.sqf";
 
 
 

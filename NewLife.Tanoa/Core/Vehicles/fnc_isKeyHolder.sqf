@@ -8,5 +8,5 @@ _isHolder = {
     if(_uid find _x) exitWith {
         true;
     };
-} forEach _keychain;
+} forEach keychain;
 _isHolder;

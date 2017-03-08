@@ -7,4 +7,4 @@ _licenses = playerInfo select 13;
     if(_x select 0 == "Terrorist") then {
         life_side = life_sides select 2;
     };
-} forEach _licenses'
+} forEach _licenses;

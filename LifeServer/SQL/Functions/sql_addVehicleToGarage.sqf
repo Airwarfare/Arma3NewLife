@@ -10,4 +10,12 @@ _vitems = _this select 3;
 _skin = _this select 4;
 if(isNil _vitems) then { _vitems = ""; };
 if(isNil _skin) then { _skin = ""; };
-_update = "extDB3" callExtension format["1:SQL:INSERT INTO vehiclegarage (ownerUID, vehicleClass, vehicleDamage, vehicleVitems, vehicleSkin) VALUES ('""%1""', '""%2""', '""%3""', '""%4""', '""%5""')", _uid, _class, _damage, _vitems, _skin];
+_randomNumber = nil;
+while {true} do {
+    _r = floor(random 50000);
+    _numberQuery = format["SELECT * FROM vehiclegarage WHERE vehicleID = '""%1""'", _r];
+    if(_numberQuery == "[1,[]]") exitWith {
+        _randomNumber = _r;
+    };
+};
+_update = "extDB3" callExtension format["1:SQL:INSERT INTO vehiclegarage (ownerUID, vehicleClass, vehicleDamage, vehicleVitems, vehicleSkin, vehicleID) VALUES ('""%1""', '""%2""', '""%3""', '""%4""', '""%5""', '""%6""')", _uid, _class, _damage, _vitems, _skin, _randomNumber];
