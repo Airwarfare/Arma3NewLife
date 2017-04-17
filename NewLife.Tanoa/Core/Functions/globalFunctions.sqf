@@ -33,3 +33,8 @@ fnc_receiveCar = compile preprocessFile "Core\Functions\fnc_receiveCar.sqf";
 
 //Cop
 fnc_cop_ranks = compile preprocessFile "Core\Cop\fnc_cop_ranks.sqf";
+
+//Comps
+fnc_spawn_comp = compile preprocessFile "Core\Functions\fnc_spawn_comp.sqf";
+GangBase1_comp = compile preprocessFile "Comps\GangBase1_comp.sqf";
+GnagBase1Con_comp = compile preprocessFile "Comps\GangBase1Con_comp.sqf";

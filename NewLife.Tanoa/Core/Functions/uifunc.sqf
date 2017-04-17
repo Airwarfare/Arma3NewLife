@@ -188,10 +188,12 @@ compileFinal"
 
 fnc_car_info = 
 compileFinal"
-	_index = _this select 1;
+	_index = (_this select 0) select 1;
 	_array = lbData [1500, _index];
 	_array = call compile _array;
 	_class = _array select 0;
+
+	diag_log format[""0: %1 1: %2 2: %3"", _this select 0, _this select 1, _this select 2];
 
 	_scope = getNumber(configFile >> ""CfgVehicles"" >> _class >> ""scope"");
 	_picture = getText(configFile >> ""CfgVehicles"" >> _class >> ""picture"");
@@ -206,7 +208,7 @@ compileFinal"
 	_fuel = getNumber(configFile >> ""CfgVehicles"" >> _class >> ""fuelCapacity"");
 
 	diag_log format[""%1, %2, %3, %4, %5, %6, %7, %8, %9, %10, %11"", _scope, _picture, _displayName, _vehicleClass, _side, _faction, _speed, _armor, _seats, _hp, _fuel];
-	_control = (findDisplay 50000) displayCtrl 1001;
+	_control = _this select 1;
 	_control ctrlSetStructuredText parseText format[""Speed: %1<br />Armor: %2<br />Seats: %3<br />Fuel Capacity: %4<br />Weight Capacity: %5"", _speed, _armor, _seats + 1, _fuel, _array select 1];
 ";
 
@@ -236,4 +238,51 @@ compileFinal"
 		_vehicle setVehicleLock ""LOCKED"";
 		keychain = keychain + [_keyValue];
 	};
+";
+
+fnc_garage_menu = 
+compileFinal"
+	if(isNull(findDisplay 25000)) then {
+		_ok = createDialog ""garage_menu"";
+	};
+	[getPlayerUID player, clientOwner] remoteExec [""sql_getVehicleInv"", 2];
+";
+
+fnc_garage_menu_list =
+compileFinal"
+	_carslist = _this select 0;
+	_carInfo = _this select 1;
+	_cars = [];
+	_control = (findDisplay 25000) displayCtrl 1500;
+	{
+		_carElement = _x;
+		{
+			if(_x select 1 == _carElement select 1) then {
+				_array = _carElement + [_x select 0] + [_x select 5];
+				_cars = _cars + [_array];
+			};
+		} forEach _carslist;
+	} foreach car_config;
+	diag_log _cars select 0;
+	_count = 0;
+	{
+		_picture = getText(configFile >> ""CfgVehicles"" >> (_x select 1) >> ""picture"");
+		_text = _x select 0;
+		_index = _control lbAdd _text;
+		_control lbSetPicture[_index, _picture];
+		_array = [_x select 1, _x select 4, _x select 5, _x select 6];
+		_dataSet = format[""%1"", _array];
+		_data = lbSetData [1500, _index, _dataSet];
+		_count = _count + 1;
+	} forEach _cars;
+	_control lbSetCurSel 0;
+";
+
+fnc_garage_pull = 
+compileFinal"
+	_control = (findDisplay 25000) displayCtrl 1500;
+	_index = lbCurSel _control;
+	_array = lbData[1500, _index];
+	_array = call compile _array;
+	[_array select 2, _array select 3, clientOwner] remoteExec [""sql_grabVehicle"", 2];
 ";

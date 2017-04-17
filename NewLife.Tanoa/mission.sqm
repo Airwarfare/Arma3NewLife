@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=323;
+		nextID=324;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5696.1768,84.150635,10278.938};
-		dir[]={-0.080259591,-0.94201195,0.32585207};
-		up[]={-0.22529726,0.33550456,0.91470218};
-		aside[]={0.97098488,-7.7998266e-008,0.2391606};
+		pos[]={5710.0986,84.150635,10276.958};
+		dir[]={-0.14663616,-0.75986248,0.63333827};
+		up[]={-0.171409,0.65001899,0.74033582};
+		aside[]={0.97423589,1.3591489e-007,0.2255639};
 	};
 };
 binarizationWanted=0;
@@ -195,7 +195,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=115;
+		items=116;
 		class Item0
 		{
 			dataType="Group";
@@ -6264,6 +6264,15 @@ class Mission
 			type="Empty";
 			id=322;
 			atlOffset=1.1816797e+035;
+		};
+		class Item115
+		{
+			dataType="Marker";
+			position[]={5673.6992,-2.7450231e-037,10308.094};
+			name="garagespawn_1";
+			type="Empty";
+			id=323;
+			atlOffset=-3.2704053;
 		};
 	};
 };

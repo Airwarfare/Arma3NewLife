@@ -41,7 +41,7 @@ class car_shop {
             y = 0.357 * safezoneH + safezoneY;
             w = 0.0928125 * safezoneW;
             h = 0.264 * safezoneH;
-            onLBSelChanged= "_this call fnc_car_info";
+            onLBSelChanged= "[_this, (findDisplay 50000) displayCtrl 1001] call fnc_car_info";
         };
 
         class CarInfo: RscStructuredText

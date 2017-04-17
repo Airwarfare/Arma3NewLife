@@ -12,7 +12,7 @@ _objects = nearestObjects [player, ["Car", "Tank", "Helicopter", "Plane", "Boat"
         _ownerUID = getPlayerUID player;
         _vehicleClass = typeOf _x;
         _vehicleDamage = damage _x;
-        [_ownerUID, _vehicleClass, _vehicleDamage, "", ""] remoteExec ["sql_addVehicleToGarage", 2];
+        [_ownerUID, _vehicleClass, _vehicleDamage, "", "", _var] remoteExec ["sql_addVehicleToGarage", 2];
         deleteVehicle _x;
     };
 } forEach _objects;
