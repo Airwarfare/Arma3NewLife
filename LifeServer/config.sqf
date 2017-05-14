@@ -18,6 +18,8 @@ crime_rob = 0;
 crime_rob_bounty = 0;
 crime_murder = 0;
 crime_murder_bounty = 0;
+crime_vdm = 0;
+crime_vdm_bounty = 0;
 
 //Cop Rank Levels
 //

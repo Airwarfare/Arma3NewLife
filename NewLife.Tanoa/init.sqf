@@ -50,6 +50,7 @@ waitUntil {!(isNull (findDisplay 46))};
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call fnc_key_press"];
 player addEventHandler ["Fired", "_this call fnc_safezone"];
+player addEventHandler ["Killed", [_this select 0, _this select 1] remoteExec ["server_player_death", 2]];
 //_ok = createDialog "spawn_menu";
 0 cutText ["", "BLACK IN"];
 diag_log format ["This is the client!"];
